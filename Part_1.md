@@ -108,3 +108,124 @@ Max value is: 18
   ```python
   random_number = random.randint(1, 10)  
   print(random_number)  # Could print any number between 1 and 10  
+
+## Example Output
+- Guess the number (1-10): 4  
+Too low! Try again.  
+
+- Guess the number (1-10): 10  
+Too high! Try again.  
+
+- Guess the number (1-10): 8  
+🎉 Correct! You win!  
+
+
+# Exercise 7: Password Checker  
+- This program continuously prompts the user to enter a password until the correct one is provided.  
+- It uses a **while loop** to keep asking for the password until the correct one is entered.  
+- The program checks if the password matches the predefined value (`"Python123"`) and grants access when it does.  
+
+## Example Output  
+Enter the password: hello  
+Incorrect password. Try again.
+
+Enter the password: Python123  
+Access Granted!
+
+
+# Exercise 8: Series Calculation  
+- This program calculates the series:  
+  \[ x \times \frac{5^{2}}{1 + 2!} + x \times \frac{25^{2}}{2 + 3!} + ... \text{(N terms)} \]  
+- It uses the `math` module for the **factorial** function.  
+- The program:  
+  - Takes input values for `x` and `N`.  
+  - Defines the function `calculate_series(x, N)` to compute the series.  
+  - Iterates over `N` terms and accumulates the total.  
+- Finally, it displays the result.  
+
+## Why Use the `math` Module?  
+- The `math` module provides efficient mathematical operations, including the **factorial operator**.  
+- `math.factorial(n)` returns the factorial of `n` (e.g., `math.factorial(3)` → `6`).  
+- Using the module simplifies the calculation, making the code cleaner and more efficient.  
+
+## Example Output  
+- Enter the value of x: 2
+- Enter the number of terms (N): 3  
+Series result: 10.482142857142858
+
+
+# Exercise 9: Mirror Reflection of an Image  
+This program:  
+- Loads an image from an online URL.  
+- Converts it into a **NumPy array**.  
+- Generates **horizontal** and **vertical** mirror reflections.  
+- Displays the original and mirrored images using **Matplotlib**.  
+
+---
+
+## ✅ **Explanation**
+1. **Modules used:**  
+   - `requests`: Downloads the image from a URL.  
+   - `Pillow (PIL)`: Opens and processes the image.  
+   - `NumPy`: Converts the image into an array and creates mirrored reflections.  
+   - `Matplotlib`: Displays the original and mirrored images.  
+
+2. **Code validation tools:**  
+   - `try-except` blocks → Catch and handle errors gracefully.  
+   - `response.raise_for_status()` → Verifies that the image request is successful.  
+   - Image validation → Ensures the image loads correctly before processing.  
+
+---
+
+## 🚀 **Sample Output**
+- **Original Image**  
+- **Horizontal Mirror Reflection**  
+- **Vertical Mirror Reflection**
+
+
+# Exercise 10: Temperature Data Analysis  
+This program:  
+1. Creates a **NumPy array** with temperature data.  
+2. Finds the **minimum**, **maximum**, and **average** temperatures.  
+3. Converts the temperatures from **Celsius to Fahrenheit**.  
+4. Identifies all days where the temperature was **above 25°C**.  
+5. Counts how many days had temperatures **below 20°C**.  
+6. Sorts the temperature data in **ascending order**.  
+7. Reshapes the 1D array into a **5x6 2D array** representing weeks (5 weeks of 6 days each).  
+
+---
+
+## ✅ **Explanation**
+1. **Modules used:**  
+   - `numpy`: Library for numerical operations and array manipulations.  
+
+2. **Key operations performed:**  
+   - **Temperature analysis:** Min, max, and average values are calculated.  
+   - **Fahrenheit conversion:** Uses the formula:  
+     \[ F = C \times \frac{9}{5} + 32 \]  
+   - **Filtering:** Finds all days with temperatures over 25°C.  
+   - **Counting:** Counts how many days were below 20°C.  
+   - **Sorting:** Sorts the temperatures in ascending order.  
+   - **Reshaping:** Creates a 2D array of 5 weeks with 6 days each.  
+
+---
+
+## 🚀 **Sample Output**
+Min: 18  
+Max: 30  
+Average: 23.1  
+
+Fahrenheit: 71.6, 75.2, 66.2, 69.8, 73.4, 77.0, 78.8, 80.6, 75.2, 73.4, 68.0, 71.6, 69.8, 66.2, 64.4, 71.6, 73.4, 75.2, 78.8, 82.4, 86.0, 80.6, 77.0, 78.8, 75.2, 71.6, 69.8, 68.0, 66.2, 73.4
+
+Above 25°C: 26, 27, 26, 28, 30, 27, 26
+
+Days below 20°C: 4
+
+Sorted Temps: 18, 19, 19, 19, 20, 20, 21, 21, 21, 22, 22, 22, 22, 23, 23, 23, 23, 24, 24, 24, 24, 25, 25, 26, 26, 26, 27, 27, 28, 30
+
+5x6 Array (Weeks):  
+[[22 24 19 21 23 25]  
+[26 27 24 23 20 22]  
+[21 19 18 22 23 24]  
+[26 28 30 27 25 26]  
+[24 22 21 20 19 23]]  
